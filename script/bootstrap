@@ -2,5 +2,5 @@
 
 set -e
 
-gem install bundler
+gem install jekyll bundler
 bundle install
