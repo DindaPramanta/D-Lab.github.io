@@ -14,3 +14,14 @@
   height: auto;
   margin-bottom: 20px;
 }
+
+.repo-owner a {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #4285F4;
+  text-decoration: none;
+}
+
+.repo-owner a:hover {
+  text-decoration: underline;
+}
