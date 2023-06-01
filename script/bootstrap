@@ -1,5 +1,8 @@
 #!/bin/sh
 
+chmod +x script/bootstrap
+
+
 set -e
 
 gem install bundler
