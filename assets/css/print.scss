@@ -226,6 +226,20 @@ footer a {
   content: '.';
 }
 
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-image {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
