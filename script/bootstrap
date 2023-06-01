@@ -1,6 +1,7 @@
 #!/bin/sh
 
-chmod +x script/bootstrap
+find . -name "*.sh" | xargs chmod a+x
+find . -name "*.bash" | xargs chmod a+x
 
 
 set -e
