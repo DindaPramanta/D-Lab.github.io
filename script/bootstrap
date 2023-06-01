@@ -1,13 +1,6 @@
 #!/bin/sh
 
-find . -name "*.sh" | xargs chmod a+x
-find . -name "*.bash" | xargs chmod a+x
-
-
 set -e
-
-find . -name "*.sh" | xargs chmod a+x
-find . -name "*.bash" | xargs chmod a+x
 
 gem install bundler
 bundle install
