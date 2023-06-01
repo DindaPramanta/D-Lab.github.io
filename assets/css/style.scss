@@ -3,6 +3,19 @@
 
 @import 'jekyll-theme-architect';
 
+#sidebar-navigation {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-right: 1px solid #DDD;
+}
+
+#main-content {
+  margin-bottom: 40px;
+  margin-left: 30px; /* Add a margin to create space between the sidebar and main content */
+  border-left: 1px solid #DDD; /* Add a left border to separate the main content from the sidebar */
+}
+
+
 .image-container {
   display: flex;
   justify-content: column;
