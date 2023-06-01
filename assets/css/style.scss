@@ -2,3 +2,15 @@
 ---
 
 @import 'jekyll-theme-architect';
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-image {
+  max-width: 10%;
+  height: auto;
+  margin-bottom: 20px;
+}
