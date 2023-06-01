@@ -69,6 +69,7 @@
       #sidebar-navigation {
         padding: 20px;
         margin-bottom: 40px;
+        font-size: 18px; /* Increased the font size */
       }
 
       #sidebar-navigation ul {
@@ -115,7 +116,7 @@
     </header>
 
     <div id="content-wrapper">
-      <div class="inner clearfix">
+    <div class="inner clearfix">
         <section id="main-content">
                 <h3>Introduction to D-lab</h3>
           <p>This is the official website of D-lab, a research laboratory dedicated to exploring innovative solutions in various fields. Our lab focuses on cutting-edge technologies integrated with Artificial Intelligence (AI) and interdisciplinary collaborations to tackle real-world challenges.</p>
@@ -124,7 +125,7 @@
           <!-- Replace the above paragraphs with your own introduction message -->
         </section>
 
-<aside id="sidebar">
+        <aside id="sidebar">
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="button">
               <small>Download</small>
@@ -136,35 +137,33 @@
             </a>
           {% endif %}
 
-	 <ul>
-    <li>Contents :</li>
-    <li><a href="#section1">Research Focus</a></li>
-    <li><a href="#section2">Members</a></li>
-    <li><a href="#section3">Publications</a></li>
-    <li><a href="#section4">Lecture</a></li>
-  </ul>
+          <ul>
+            <li>Contents:</li>
+            <li><a href="#section1">Research Focus</a></li>
+            <li><a href="#section2">Members</a></li>
+            <li><a href="#section3">Publications</a></li>
+            <li><a href="#section4">Lecture</a></li>
+          </ul>
           
         </aside>	      
-	    </div>
+      </div>
     </div>
 
-<section id="section1">
-  <h3>Research Focus</h3>
-  <div class="image-container">
-    <img class="poster-image" src="{{ '/assets/images/Poster-1.jpg' | relative_url }}" alt="D-Lab Poster">
-  </div>
-  <div class="image-container">
+    <section id="section1">
+      <h3>Research Focus</h3>
+      <div class="image-container">
+        <img class="poster-image" src="{{ '/assets/images/Poster-1.jpg' | relative_url }}" alt="D-Lab Poster">
+      </div>
+      <div class="image-container">
     
-    <img class="poster-image" src="{{ '/assets/images/Poster-2.jpg' | relative_url }}" alt="D-Lab Poster">
+        <img class="poster-image" src="{{ '/assets/images/Poster-2.jpg' | relative_url }}" alt="D-Lab Poster">
     
-  </div>
-  <div class="image-container">
+      </div>
+      <div class="image-container">
 
-    <img class="poster-image" src="{{ '/assets/images/Poster-3.jpg' | relative_url }}" alt="D-Lab Poster">
-  </div>
-</section>
-
-
+        <img class="poster-image" src="{{ '/assets/images/Poster-3.jpg' | relative_url }}" alt="D-Lab Poster">
+      </div>
+    </section>
 
     <section id="section2">
       <h3>Members</h3>
@@ -175,7 +174,7 @@
       <h3>Publications</h3>
       <p>Under construction.</p>
     </section>
-	
+  
     <section id="section4">
       <h3>Lecture</h3>
       <p>Under construction.</p>
@@ -190,3 +189,4 @@
     </footer>
   </body>
 </html>
+
