@@ -72,6 +72,7 @@
         background-image: url('../assets/images/sidebar-bg.jpg');
         background-size: cover;
         color: #FFF;
+        background-color: transparent; /* Added to make the background transparent */
       }
 
       #sidebar-navigation ul {
@@ -113,16 +114,6 @@
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <a href="{{ '/' | absolute_url }}">
-          <h1>Welcome to<br>D-lab</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-        {% if site.github.is_user_page %}
-          <a href="https://www.linkedin.com/in/dinda-pramanta-50696248/" class="button"><small>Follow me on</small> GitHub</a>
-        {% endif %}
-      </div>
     </header>
 
     <div id="content-wrapper">
@@ -187,4 +178,4 @@
     </footer>
   </body>
 </html>
-      
+
