@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
@@ -17,34 +17,37 @@
     <style>
       body {
         color: #333;
-        font-family: Arial, sans-serif;
-        line-height: 1.5;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
       }
 
-      h1, h2, h3 {
-        color: #4285F4;
+      header, footer {
+        background-color: #4285F4;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1, header h2, footer p {
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 36px;
         font-weight: bold;
       }
 
-      h1 {
-        font-size: 32px;
-      }
-
-      h2 {
+      header h2 {
         font-size: 24px;
       }
 
-      h3 {
-        font-size: 20px;
-      }
-
-      a {
-        color: #4285F4;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
+      .inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
       }
 
       .button {
@@ -54,24 +57,34 @@
         color: #FFF;
         text-align: center;
         border-radius: 4px;
+        text-decoration: none;
       }
 
-      .inner {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 20px;
+      .button:hover {
+        background-color: #357ae8;
       }
 
       #main-content {
         margin-bottom: 40px;
       }
 
-      #sidebar-navigation {
-        padding: 20px;
+      h3 {
+        color: #4285F4;
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      #sidebar {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
         margin-bottom: 40px;
-        background-image: url('../assets/images/sidebar-bg.jpg');
-        background-size: cover;
-        font-size: 18px; /* Increased the font size */
+        padding: 20px;
       }
 
       #sidebar-navigation ul {
@@ -84,19 +97,21 @@
         margin-bottom: 10px;
       }
 
-      footer {
-        background-color: #EEE;
-        padding: 20px;
+      .image-container {
+        margin-bottom: 20px;
         text-align: center;
       }
 
-      footer p {
-        margin-bottom: 10px;
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        border: 1px solid #ddd;
       }
 
       .repo-owner {
         font-size: 14px;
-        color: #666;
+        color: #ddd;
       }
     </style>
   </head>
@@ -105,7 +120,7 @@
     <header>
       <div class="inner">
         <a href="{{ '/' | absolute_url }}">
-          <h1>Welcome to<br>D-lab</h1>
+          <h1>D-lab</h1>
         </a>
         <h2>{{ Dinda Pramanta's Lab | default: site.github.project_tagline }}</h2>
         {% if site.github.is_project_page %}
@@ -117,69 +132,64 @@
       </div>
     </header>
 
-    <div id="content-wrapper">
-    <div class="inner clearfix">
-        <section id="main-content">
-                <h3>Introduction to D-lab</h3>
-          <p>This is the official website of D-lab, a research laboratory dedicated to exploring innovative solutions in various fields. Our lab focuses on cutting-edge technologies integrated with Artificial Intelligence (AI) and interdisciplinary collaborations to tackle real-world challenges.</p>
-          <p>At D-lab, we believe in fostering a culture of curiosity, collaboration, and continuous learning. Through our research projects, we aim to make a positive impact on society and contribute to scientific advancements.</p>
-          <p>Explore our website to learn more about our ongoing projects, publications, and team members. Feel free to reach out to us if you have any inquiries or collaboration opportunities.</p>
-          <!-- Replace the above paragraphs with your own introduction message -->
-        </section>
+    <div id="content-wrapper" class="inner clearfix">
+      <section id="main-content">
+        <h3>Introduction to D-lab</h3>
+        <p>This is the official website of D-lab, a research laboratory dedicated to exploring innovative solutions in various fields. Our lab focuses on cutting-edge technologies integrated with Artificial Intelligence (AI) and interdisciplinary collaborations to tackle real-world challenges.</p>
+        <p>At D-lab, we believe in fostering a culture of curiosity, collaboration, and continuous learning. Through our research projects, we aim to make a positive impact on society and contribute to scientific advancements.</p>
+        <p>Explore our website to learn more about our ongoing projects, publications, and team members. Feel free to reach out to us if you have any inquiries or collaboration opportunities.</p>
+      </section>
 
-        <aside id="sidebar">
-          {% if site.show_downloads %}
-            <a href="{{ www.google.com }}" class="button">
-              <small>Download</small>
-              .zip file
-            </a>
-            <a href="{{ www.google.com }}" class="button">
-              <small>Download</small>
-              .tar.gz file
-            </a>
-          {% endif %}
+      <aside id="sidebar">
+        {% if site.show_downloads %}
+          <a href="{{ www.google.com }}" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="{{ www.google.com }}" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+        {% endif %}
 
-<ul style="font-size: 20px;">
-  <li>Contents:</li>
-  <li><a href="#section1">Research Focus</a></li>
-  <li><a href="#section2">Members</a></li>
-  <li><a href="#section3">Publications</a></li>
-  <li><a href="#section4">Lecture</a></li>
-</ul>
-          
-        </aside>	      
-      </div>
+        <div id="sidebar-navigation">
+          <ul>
+            <li><strong>Contents:</strong></li>
+            <li><a href="#section1">Research Focus</a></li>
+            <li><a href="#section2">Members</a></li>
+            <li><a href="#section3">Publications</a></li>
+            <li><a href="#section4">Lecture</a></li>
+          </ul>
+        </div>
+      </aside>	      
     </div>
 
-    <section id="section1">
+    <section id="section1" class="inner">
       <h3>Research Focus</h3>
       <div class="image-container">
-        <img class="poster-image" src="{{ '/assets/images/Poster-1.jpg' | relative_url }}" alt="D-Lab Poster">
+        <img src="{{ '/assets/images/Poster-1.jpg' | relative_url }}" alt="D-Lab Poster">
       </div>
       <div class="image-container">
-    
-        <img class="poster-image" src="{{ '/assets/images/Poster-2.jpg' | relative_url }}" alt="D-Lab Poster">
-    
+        <img src="{{ '/assets/images/Poster-2.jpg' | relative_url }}" alt="D-Lab Poster">
       </div>
       <div class="image-container">
-
-        <img class="poster-image" src="{{ '/assets/images/Poster-3.jpg' | relative_url }}" alt="D-Lab Poster">
+        <img src="{{ '/assets/images/Poster-3.jpg' | relative_url }}" alt="D-Lab Poster">
       </div>
     </section>
 
-    <section id="section2">
+    <section id="section2" class="inner">
       <h3>Members</h3>
-      <p>Under_construction.</p>
+      <p>Under construction.</p>
     </section>
     
-    <section id="section3">
+    <section id="section3" class="inner">
       <h3>Publications</h3>
-      <p>Under_construction.</p>
+      <p>Under construction.</p>
     </section>
   
-    <section id="section4">
+    <section id="section4" class="inner">
       <h3>Lecture</h3>
-      <p>Under_construction.</p>
+      <p>Under construction.</p>
     </section>
 
     <footer>
@@ -191,4 +201,3 @@
     </footer>
   </body>
 </html>
-
